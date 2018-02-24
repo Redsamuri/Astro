@@ -90,10 +90,10 @@ Setgroup =""" Private Menu 􀔃􀄆red check mark􏿿
 [Invite mid] = Invite via mid
 [inv: (gid)] = Invite admin ke group id yang dituju
 [Kick mid] = Kick via mid
-[Ard Squad join] = Invite semua bot
+[Red join] = Invite semua bot
 [Bye bots] = Mengeluarkan semua bots assist
-[Bye Ard] = Mengeluarkan bot utama
-[Ard out] = Mengeluarkan bot utama dari semua grup
+[Bye red] = Mengeluarkan bot utama
+[red out] = Mengeluarkan bot utama dari semua grup
 [Bc ...] = Untuk broadcast ke semua grup
 [Kernel] = Melihat kernel bot"""
 KAC=[cl,ki,kk,kc]
@@ -103,9 +103,9 @@ Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
 Cmid = kc.getProfile().mid
 
-Bots=[mid,Amid,Bmid,Cmid,"YOUR_MID"]
-admin=["YOUR_MID"]
-admsa=["YOUR_MID"]
+Bots=[mid,Amid,Bmid,Cmid,"ใส่ไอดี"]
+admin=["ใส่ไอดี"]
+admsa=["ใส่ไอดี"]
 wait = {
     'contact':False,
     'autoJoin':True,
@@ -121,10 +121,10 @@ wait = {
     "wblack":False,
     "dblack":False,
     "clock":False,
-    "cName":"Ard",
-    "cName2":"Ard 1",
-    "cName3":"Ard 2",
-    "cName4":"Ard 3",
+    "cName":"Ŕèď",
+    "cName2":"red 1",
+    "cName3":"red 2",
+    "cName4":"red 3",
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
