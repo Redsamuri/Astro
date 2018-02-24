@@ -14,19 +14,19 @@ import requests,tempfile
 #kk.loginResult()
 
 cl = LINETCR.LINE()
-cl.login(qr=True)
+cl.login(token"-")
 cl.loginResult()
 
 ki = LINETCR.LINE()
-ki.login(qr=True)
+ki.login(token"-")
 ki.loginResult()
 
 kk = LINETCR.LINE()
-kk.login(qr=True)
+kk.login(token"-")
 kk.loginResult()
 
 kc = LINETCR.LINE()
-kc.login(qr=True)
+kc.login(token"-")
 kc.loginResult()
 
 cl
@@ -35,7 +35,7 @@ print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage =""" - Ard Squad bot -
+helpMessage =""" - Red Squad bot -
 
 General command :
 Me  =  Cek akun sendiri
@@ -113,7 +113,7 @@ wait = {
     'leaveRoom':True,
     'timeline':False,
     'autoAdd':True,
-    'message':"Thanks for adding me\nFollow my instagram; instagram.com/fajrinard",
+    'message':"Thanks for adding me",
     "lang":"JP",
     "comment":"Thanks for add me",
     "commentOn":True,
@@ -522,11 +522,11 @@ def bot(op):
         if op.type == 24:
             if wait["leaveRoom"] == True:
                 cl.leaveRoom(op.param1)
-        if op.type == 26:
+        if op.type == 25:
             msg = op.message
             if msg.toType == 0:
                 msg.to = msg.from_
-                if msg.from_ == "ue11fc7860247c63bd3da149613a793f6":
+                if msg.from abmin:
                     if "join:" in msg.text:
                         list_ = msg.text.split(":")
                         try:
@@ -536,7 +536,7 @@ def bot(op):
                             cl.updateGroup(G)
                         except:
                             cl.sendText(msg.to,"error")
-        if op.type == 26:
+        if op.type == 25:
             msg = op.message
             if msg.toType == 1:
                 if wait["leaveRoom"] == True:
@@ -1112,7 +1112,7 @@ def bot(op):
 
 #-----------------------------------------------
          #----------------Fungsi Join Group Start-----------------------#
-            elif msg.text in ["Ard Squad join"]:
+            elif msg.text in ["Red join"]:
               if msg.from_ in admin:
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
@@ -1133,7 +1133,7 @@ def bot(op):
                         G.preventJoinByTicket(G)
                         cl.updateGroup(G)
 
-            elif msg.text in ["Ard join"]:
+            elif msg.text in ["red join"]:
               if msg.form_ in admin:
                   x = ki.getGroup(msg.to)
                   x.preventJoinByTicket = False
@@ -1146,7 +1146,7 @@ def bot(op):
                   ki.updateGroup(G)
                   Ticket = ki.reissueGroupTicket(msg.to)
 
-            elif msg.text in ["Ard1 join"]:
+            elif msg.text in ["red1 join"]:
               if msg.from_ in admin:
                   x = cl.getGroup(msg.to)
                   x.preventJoinByTicket = False
@@ -1159,7 +1159,7 @@ def bot(op):
                   cl.updateGroup(G)
                   Ticket = cl.reissueGroupTicket(msg.to)
 
-            elif msg.text in ["Ard2 join"]:
+            elif msg.text in ["red2 join"]:
               if msg.from_ in admin:
                   x = cl.getGroup(msg.to)
                   x.preventJoinByTicket = False
@@ -1172,7 +1172,7 @@ def bot(op):
                   cl.updateGroup(G)
                   Ticket = cl.reissueGroupTicket(msg.to)
                   
-            elif msg.text in ["Ard3 join"]:
+            elif msg.text in ["red3 join"]:
               if msg.from_ in admin:
                   X = cl.getGroup(msg.to)
                   X.preventJoinByTicket = False
@@ -1197,7 +1197,7 @@ def bot(op):
                         kc.leaveGroup(msg.to)
                     except:
                         pass
-            elif msg.text in ["Bye Ard"]:
+            elif msg.text in ["Bye red"]:
               if msg.from_ in admin:
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
@@ -1521,7 +1521,7 @@ def bot(op):
                     except:
                         pass
 
-            elif msg.text.lower() == 'ard out all':
+            elif msg.text.lower() == 'red out all':
 			  if msg.from_ in admsa:
 				gid = cl.getGroupIdsJoined()
 				gid = ki.getGroupIdsJoined()
@@ -1536,7 +1536,7 @@ def bot(op):
 					cl.sendText(msg.to,"Ard Squad bot leaving all groups.")
 				else:
 					cl.sendText(msg.to,"He declined all invitations")
-            elif msg.text.lower() == 'ard out':
+            elif msg.text.lower() == 'red out':
 			  if msg.from_ in admsa:
 				gid = cl.getGroupIdsJoined()
 				for i in gid:
@@ -1738,7 +1738,7 @@ def autolike():
         if hasil['result']['posts'][zx]['postInfo']['liked'] == False:
           try:    
 			cl.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1003)
-			cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by\nline.me/ti/p/~ardfajrin")
+			cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by\nline.me/ti/p/~redsamuri1")
 			ki.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1003)
 			kk.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1003)
 			kc.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1003)
